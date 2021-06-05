@@ -7,6 +7,5 @@ namespace Tinh_Diem
     public interface Diem
     {
         double DTB();
-        string DiemChu();
     }
 }

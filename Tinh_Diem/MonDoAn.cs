@@ -15,12 +15,12 @@ namespace Tinh_Diem
             {
                 Console.Write("Nhập điểm giáo viên hướng dẫn: ");
                 this.diemGVHD = Convert.ToInt32(Console.ReadLine());
-            } while (this.diemGVHD < 0 && this.diemGVHD > 10);
+            } while (this.diemGVHD < 0 || this.diemGVHD > 10);
             do
             {
                 Console.Write("Nhập điểm giáo viên phản biện: ");
                 this.diemGVPB = Convert.ToInt32(Console.ReadLine());
-            } while (this.diemGVPB < 0 && this.diemGVPB > 10);
+            } while (this.diemGVPB < 0 || this.diemGVPB > 10);
             Console.WriteLine("Đã nhập xong!");
         }
         public override void Display()
@@ -29,22 +29,9 @@ namespace Tinh_Diem
             Console.WriteLine("Điểm giáo viên hướng dẫn: {0}", this.diemGVHD);
             Console.WriteLine("Điểm giáo viên phản biện: {0}", this.diemGVPB);
             Console.WriteLine("Điểm trung bình môn: {0}", DTB());
-            Console.WriteLine("Điểm chữ: {0}", DiemChu());
+            Console.WriteLine("Điểm chữ: {0}", DiemHe4(DTB()));
             Console.WriteLine("*****");
         }
         public double DTB() => (this.diemGVHD + this.diemGVPB) / 2;
-        public string DiemChu()
-        {
-            if (DTB() >= 8.5)
-                return "A";
-            else if (DTB() >= 7.0)
-                return "B";
-            else if (DTB() >= 5.5)
-                return "C";
-            else if (DTB() >= 4.0)
-                return "D";
-            else
-                return "F";
-        }
     }
 }
