@@ -36,5 +36,18 @@ namespace Tinh_Diem
                 this.soTinChi = Convert.ToInt32(Console.ReadLine());
             } while (this.soTinChi < 1);
         }
+        public string DiemHe4(double dtb)
+        {
+            if (dtb >= 8.5)
+                return "A";
+            else if (dtb >= 7.0)
+                return "B";
+            else if (dtb >= 5.5)
+                return "C";
+            else if (dtb >= 4.0)
+                return "D";
+            else
+                return "F";
+        }
     }
 }
