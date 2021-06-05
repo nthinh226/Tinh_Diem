@@ -15,12 +15,12 @@ namespace Tinh_Diem
             {
                 Console.Write("Nhập điểm giáo viên hướng dẫn: ");
                 this.diemGVHD = Convert.ToDouble(Console.ReadLine());
-            } while (this.diemGVHD < 0 || this.diemGVHD > 10);
+            } while (this.diemGVHD < 0 && this.diemGVHD > 10);
             do
             {
                 Console.Write("Nhập điểm giáo viên phản biện: ");
                 this.diemGVPB = Convert.ToDouble(Console.ReadLine());
-            } while (this.diemGVPB < 0 || this.diemGVPB > 10);
+            } while (this.diemGVPB < 0 && this.diemGVPB > 10);
             Console.WriteLine("Đã nhập xong!");
         }
         public override void Display()
