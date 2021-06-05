@@ -67,7 +67,8 @@ namespace Tinh_Diem
                         }
                         break;
                     default:
-                        Console.WriteLine("Không có tính năng này!!");
+                        if (!option.Equals("exit"))
+                            Console.WriteLine("Không có tính năng này!!");
                         break;
                 }
             } while (!option.Equals("exit"));
